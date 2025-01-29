@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/moving-border";
+import Title from "./Title";
 
 export default function HeroSection() {
   return (
@@ -18,14 +19,7 @@ export default function HeroSection() {
           usuário intuitivas e experiências digitais excepcionais.
         </p>
         <Link className="group inline-block" href="mailto:ruaosena@hotmail.com">
-          <div>
-            <h1 className="text-3xl font-bold transition-all group-hover:text-orange-400">
-              Entre em Contato
-              <span className="sr-only sm:not-sr-only"> comigo 📭</span>
-            </h1>
-            <div className="h-2 w-56 translate-x-2.5 rounded-full bg-orange-500 sm:w-[53%]" />
-            <div className="h-2 w-56 translate-x-5 rounded-full bg-violet-500 sm:w-[53%]" />
-          </div>
+          <Title>Entre em Contato 📭</Title>
         </Link>
       </div>
 
