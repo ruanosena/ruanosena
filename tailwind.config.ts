@@ -67,6 +67,21 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        bump: {
+          "0%, 100%": { scale: "initial" },
+          "5%": { scale: "1.25" },
+          "10%": { scale: "initial" },
+        },
+        "show-from-left": {
+          "0%": { transform: "translateX(-6rem)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        bump: "7s bump 6s linear infinite",
+        "show-from-left": "0.75s show-from-left 5s ease-in-out 1 forwards",
+      },
     },
   },
   plugins: [
