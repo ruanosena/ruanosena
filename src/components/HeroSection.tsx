@@ -15,7 +15,10 @@ export default function HeroSection() {
           Desenvolvedor web full-stack com paixão por criar interfaces de
           usuário intuitivas e experiências digitais excepcionais.
         </p>
-        <Link className="group inline-block" href="mailto:ruaosena@hotmail.com">
+        <Link
+          className="group inline-block"
+          href="mailto:ruosena@hotmail.com?subject=Desenvolvimento+de+site&body=Ol%C3%A1+Ruan,+gostaria+de+um+or%C3%A7amento+para+um+site..."
+        >
           <Title>Entre em Contato 📭</Title>
         </Link>
       </div>
@@ -35,7 +38,7 @@ export default function HeroSection() {
           <div className="glow absolute right-1/2 top-[40%] -z-50" />
         </div>
 
-        <div className="animate-bump absolute bottom-5 left-0 sm:-left-10 sm:bottom-14">
+        <div className="absolute bottom-5 left-0 animate-bump sm:-left-10 sm:bottom-14">
           <Button
             borderRadius="0.5rem"
             className="whitespace-nowrap p-3 font-mono font-medium xl:text-base"
