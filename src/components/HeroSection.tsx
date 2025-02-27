@@ -1,9 +1,6 @@
-import Link from "next/link";
-import React from "react";
-import { Button } from "./ui/moving-border";
-import Title from "./Title";
-import { WriteLineEffect } from "./ui/write-line-effect";
 import HeroTitle from "./HeroTitle";
+import { LinkPreview } from "./ui/link-preview";
+import { Button } from "./ui/moving-border";
 
 export default function HeroSection() {
   return (
@@ -15,12 +12,22 @@ export default function HeroSection() {
           Desenvolvedor web full-stack com paixão por criar interfaces de
           usuário intuitivas e experiências digitais excepcionais.
         </p>
-        <Link
-          className="group inline-block"
-          href="mailto:ruosena@hotmail.com?subject=Desenvolvimento+de+site&body=Ol%C3%A1+Ruan,+gostaria+de+um+or%C3%A7amento+para+um+site..."
-        >
-          <Title>Entre em Contato 📭</Title>
-        </Link>
+
+        <div className="group relative z-10 inline-block w-fit">
+          <LinkPreview
+            isStatic
+            imageSrc="/pagina-contato.jpeg"
+            className="inline-block"
+            url="/contato"
+            quality={100}
+          >
+            <span className="text-3xl font-bold transition-all group-hover:text-orange-400">
+              Entre em Contato 📭
+            </span>
+            <div className="absolute top-full h-2 w-56 translate-x-[2.5%] rounded-full bg-orange-500 sm:w-[77%]" />
+            <div className="absolute top-[calc(100%_+_0.5rem)] h-2 w-56 translate-x-[5%] rounded-full bg-violet-500 sm:w-[77%]" />
+          </LinkPreview>
+        </div>
       </div>
 
       <div className="relative">

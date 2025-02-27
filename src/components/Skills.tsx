@@ -1,8 +1,5 @@
 "use client";
 
-import React from "react";
-import Title from "./Title";
-import { HoverEffect, HoverEffectItem } from "./ui/card-hover-effect";
 import {
   SiJavascript,
   SiNextdotjs,
@@ -14,6 +11,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import { HoverEffect, HoverEffectItem } from "./ui/card-hover-effect";
 
 const skills: HoverEffectItem[] = [
   {
@@ -54,7 +52,13 @@ const skills: HoverEffectItem[] = [
 export default function Skills() {
   return (
     <div className="mx-auto max-w-5xl px-8">
-      <Title className="mx-auto -rotate-6">Skills 🤹‍♂️</Title>
+      <div className="relative mx-auto w-fit -rotate-6">
+        <h2 className="text-3xl font-bold transition-all group-hover:text-orange-400">
+          Skills 🤹‍♂️
+        </h2>
+        <div className="absolute top-full h-2 w-56 translate-x-[2.5%] rounded-full bg-orange-500 sm:w-[77%]" />
+        <div className="absolute top-[calc(100%_+_0.5rem)] h-2 w-56 translate-x-[5%] rounded-full bg-violet-500 sm:w-[77%]" />
+      </div>
 
       <HoverEffect items={skills} />
     </div>
