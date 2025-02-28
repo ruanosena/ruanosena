@@ -1,8 +1,8 @@
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Andika, Fira_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import { cn } from "@/lib/utils";
 
 const andikaSans = Andika({
   variable: "--font-andika-sans",
@@ -36,14 +36,13 @@ export default function RootLayout({
           "min-h-screen bg-black antialiased",
         )}
       >
+        {children}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        ></ThemeProvider>
       </body>
     </html>
   );
