@@ -4,6 +4,8 @@ import { z } from "zod";
 export const env = createEnv({
   server: {
     RECAPTCHA_SECRET_KEY: z.string().min(1),
+    CONTACT_EMAIL_ADDRESS: z.string().email(),
+    CONTACT_EMAIL_PASSWORD: z.string().min(1),
   },
   client: {
     NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY: z.string().min(1),
